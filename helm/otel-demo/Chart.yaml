@@ -1,0 +1,17 @@
+apiVersion: v2
+name: otel-demo
+description: >
+  OpenTelemetry Demo application — a microservices-based e-commerce app
+  instrumented with OpenTelemetry. Built-in observability stack removed,
+  ready for local Kubernetes deployment.
+type: application
+version: 1.0.0
+appVersion: "2.1.3"
+keywords:
+  - opentelemetry
+  - observability
+  - microservices
+  - demo
+maintainers:
+  - name: Ashish Kumar
+    email: ashish.kumar@datadoghq.com

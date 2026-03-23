@@ -1,0 +1,24 @@
+# =============================================================================
+# OpenTelemetry Demo — Helm Values
+# =============================================================================
+
+# -- Global settings applied across all components
+global:
+  # Image pull policy for all containers
+  imagePullPolicy: IfNotPresent
+
+# -----------------------------------------------------------------------------
+# Frontend Proxy (Envoy) — the main ingress to the demo app
+# -----------------------------------------------------------------------------
+frontendProxy:
+  service:
+    # LoadBalancer works on Docker Desktop (Mac and Ubuntu) — exposes on localhost:8080
+    type: LoadBalancer
+    port: 8080
+
+# -----------------------------------------------------------------------------
+# Load Generator — controls traffic to the demo app
+# -----------------------------------------------------------------------------
+loadGenerator:
+  # Set to 0 to disable synthetic traffic
+  replicaCount: 1

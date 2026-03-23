@@ -1,0 +1,5 @@
+# Namespace for all OpenTelemetry Demo resources
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: otel-demo
